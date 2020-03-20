@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 
+<script>
+if(grecaptcha.getResponse().length === 0) {
+  alert("test")
+     window.location = "discordapp.com"
+}
+</script>
+
 complete recaptcha! to go to FEC Server
+
+
 
 <html>
   <head>
@@ -10,15 +19,10 @@ complete recaptcha! to go to FEC Server
     <form action="?" method="POST">
       <div class="g-recaptcha" data-sitekey="6LeHneIUAAAAAD8pTKf9wpfDYzsiNsOg_b2Vw1l_"></div>
       <br/>
-      <input type="submit" value="Submit">
     </form>
   </body>
 </html>
 
 
 
-<script>
-if(grecaptcha.getResponse().length === 0) {
-     window.location = "discordapp.com"
-}
-</script>
+
