@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 
-<script>
-if(grecaptcha.getResponse().length === 0) {
-  alert("test")
-     window.location = "discordapp.com"
-}
-</script>
 
 complete recaptcha! to go to FEC Server
 
@@ -14,6 +8,12 @@ complete recaptcha! to go to FEC Server
 <html>
   <head>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+if (grecaptcha.getResponse() == "success") {
+    function Redirect() {
+      window.location = "example.com";
+    }
+</script>
   </head>
   <body>
     <form action="?" method="POST">
@@ -22,6 +22,7 @@ complete recaptcha! to go to FEC Server
     </form>
   </body>
 </html>
+
 
 
 
