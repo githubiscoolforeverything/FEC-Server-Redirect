@@ -3,16 +3,13 @@
 
 complete recaptcha! to go to FEC Server
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src='https://www.google.com/recaptcha/api.js?onload=reCaptchaCallback&render=explicit'></script>
 
-  <script type="text/javascript">
-    if (grecaptcha.getResponse() == "success") {
-        window.location.href = "https://www.youtube.com/";
-
-        setTimeout(Redirect, 1000);
-    } else alert("You can't proceed!");
-</script>
-
+  function reCaptchaVerify(response) {
+    if (response === document.querySelector('.g-recaptcha-response').value) {
+        window.location = "https://www.youtube.com/"
+    }
+}
 
 
 
