@@ -6,11 +6,35 @@ complete recaptcha! to go to FEC Server
 <script src='https://www.google.com/recaptcha/api.js?onload=reCaptchaCallback'></script>
 
 <script>
-  function reCaptchaVerify(response) {
+  var timer = 0,
+    RC2KEY = 'sitekey',
+    MAIN = 'http://main.page/',
+    doRedirect = false;
+
+function reCaptchaVerify(response) {
     if (response === document.querySelector('.g-recaptcha-response').value) {
-        window.location = "https://www.youtube.com/"
+        doRedirect = true;
     }
 }
+
+function reCaptchaExpired () {
+    /* do something when it expires */
+}
+
+function reCaptchaCallback () {
+    grecaptcha.render('id', {
+        'sitekey': RC2KEY,
+        'callback': reCaptchaVerify,
+        'expired-callback': reCaptchaExpired
+    });
+}
+
+timer = setTimeout(function(){
+    if (doRedirect) {
+        clearTimeout(timer);
+        location.href = MAIN;
+    }
+},0);
   </script>
 
 
