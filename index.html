@@ -5,32 +5,19 @@ complete recaptcha! to go to FEC Server
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript">
-  if (grecaptcha.getResponse() == "success") {
-    function Redirect() {
-      window.location.href = "example.com"; // Correct here
-    }
-    document.write("You will be redirected to a new page in 5 seconds ");      
-      setTimeout(Redirect,5000); // Correct here
-  }
-  else alert("You can't proceed!");
+  <script type="text/javascript">
+    if (grecaptcha.getResponse() == "success") {
+        window.location.href = "https://www.youtube.com/";
+
+        setTimeout(Redirect, 1000);
+    } else alert("You can't proceed!");
 </script>
 
-<html>
-  <head>
-    <title>reCAPTCHA demo: Simple page</title>
-  </head>
-  <body>
-    <form action="?" method="POST">
-      <div class="g-recaptcha" data-sitekey="6LeHneIUAAAAAD8pTKf9wpfDYzsiNsOg_b2Vw1l_"></div>
-      <br/>
-      <input type="submit" value="Submit">
-    </form>
-  </body>
-</html>
 
 
 
 
+<div class="g-recaptcha" data-sitekey="6LeHneIUAAAAAD8pTKf9wpfDYzsiNsOg_b2Vw1l_"></div>
 
 
 
