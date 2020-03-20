@@ -8,18 +8,18 @@ complete recaptcha! to go to FEC Server
 <html>
   <head>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-if (grecaptcha.getResponse() == "success") {
-    function Redirect() {
-      window.location = "example.com";
-    }
-</script>
   </head>
   <body>
     <form action="?" method="POST">
       <div class="g-recaptcha" data-sitekey="6LeHneIUAAAAAD8pTKf9wpfDYzsiNsOg_b2Vw1l_"></div>
       <br/>
     </form>
+    <script>
+if (grecaptcha.getResponse() == "success") {
+    function Redirect() {
+      window.location = "example.com";
+    }
+</script>
   </body>
 </html>
 
